@@ -32,4 +32,5 @@ setxkbmap gb
 
 nitrogen --restore &
 picom &
+xmobar $HOME/.config/xmobar/.xmobarrc &
 exec herbstluftwm
