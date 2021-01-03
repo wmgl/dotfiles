@@ -30,4 +30,5 @@ fi
 
 setxkbmap gb -option "nbsp:none"
 
+nitrogen --restore &
 exec herbstluftwm
