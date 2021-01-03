@@ -106,20 +106,20 @@ hc keybind $Mod-i jumpto urgent
 # theme
 hc attr theme.tiling.reset 1
 hc attr theme.floating.reset 1
-hc set frame_gap 10 # Useless gaps
+hc set frame_gap 10
 hc set window_border_width 2
-hc set window_gap -2 # Tiling window border overlap
-hc set window_border_inner_width 0 # Don't touch
+hc set window_gap 10
+hc set window_border_inner_width 0
 hc set frame_padding 0 # Don't touch
-hc set frame_border_inner_width 0 # Don't touch
-hc set frame_border_width 2 # Outside frame
-hc set frame_transparent_width 5 # If below is true how much frame is left
+hc set frame_border_inner_width 0
+hc set frame_border_width 2
+hc set frame_transparent_width 0
 hc set frame_bg_transparent true
-hc set always_show_frame false # Display all frames or only focused/used
+hc set always_show_frame false
 hc set frame_active_opacity 50
 hc set frame_normal_opacity 50
-hc set smart_frame_surroundings true # Last frame that is left loses border
-hc set smart_window_surroundings false # Last window that is left loses border
+hc set smart_frame_surroundings true
+hc set smart_window_surroundings false
 hc set snap_distance 20
 hc set snap_gap 0
 hc set raise_on_focus true
