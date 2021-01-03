@@ -108,34 +108,38 @@ hc keybind $Mod-i jumpto urgent
 # theme
 hc attr theme.tiling.reset 1
 hc attr theme.floating.reset 1
-hc set frame_border_active_color '#222222'
-hc set frame_border_normal_color '#101010'
-hc set frame_bg_normal_color '#565656'
-hc set frame_bg_active_color '#345F0C'
-hc set frame_border_width 1
-hc set always_show_frame on
-hc set frame_bg_transparent on
-hc set frame_transparent_width 5
-hc set frame_gap 4
+hc set frame_gap 10 # Useless gaps
+hc set window_border_width 2
+hc set window_gap -2 # Tiling window border overlap
+hc set window_border_inner_width 0 # Don't touch
+hc set frame_padding 0 # Don't touch
+hc set frame_border_inner_width 0 # Don't touch
+hc set frame_border_width 2 # Outside frame
+hc set frame_transparent_width 5 # If below is true how much frame is left
+hc set frame_bg_transparent true
+hc set always_show_frame false # Display all frames or only focused/used
+hc set frame_active_opacity 50
+hc set frame_normal_opacity 50
+hc set smart_frame_surroundings true # Last frame that is left loses border
+hc set smart_window_surroundings false # Last window that is left loses border
+hc set snap_distance 20
+hc set snap_gap 0
+hc set raise_on_focus true
+hc set raise_on_click true
+hc set focus_follows_mouse false
+hc set focus_stealing_prevention false
+hc set update_dragged_clients 1
 
-hc attr theme.active.color '#9fbc00'
-hc attr theme.normal.color '#454545'
-hc attr theme.urgent.color orange
-hc attr theme.inner_width 1
-hc attr theme.inner_color black
-hc attr theme.border_width 3
-hc attr theme.floating.border_width 4
-hc attr theme.floating.outer_width 1
-hc attr theme.floating.outer_color black
-hc attr theme.active.inner_color '#3E4A00'
-hc attr theme.active.outer_color '#3E4A00'
-hc attr theme.background_color '#141414'
+hc set frame_border_active_color '#816BEF'
+hc set frame_bg_active_color '#816BEF'
+hc set window_border_active_color '#B0A3F5'
+hc set window_border_urgent_color '#FF8A8E'
 
-hc set window_gap 0
-hc set frame_padding 0
-hc set smart_window_surroundings off
-hc set smart_frame_surroundings on
-hc set mouse_recenter_gap 0
+hc set frame_border_inner_color black
+hc set window_border_inner_color black
+hc set window_border_normal_color '#0A0A0A'
+hc set frame_border_normal_color '#0F0F0F'
+hc set frame_bg_normal_color '#0F0F0F'
 
 # rules
 hc unrule -F
