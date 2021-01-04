@@ -4,6 +4,12 @@ hc() {
     herbstclient "$@"
 }
 
+spawn_in_tag() {(
+    hc rule once pid=$BASHPID maxage=10 focus=on tag=$1 index=e
+    exec "$2"
+    ) &
+}
+
 hc emit_hook reload
 
 # remove all existing keybindings
@@ -159,10 +165,16 @@ hc set tree_style '╾│ ├└╼─┐'
 # unlock, just to be sure
 hc unlock
 
-# do multi monitor setup here, e.g.:
 hc set_monitors 1920x1080+0+0 1920x1062+1920+18 1920x1080+3840+0
-# or simply:
-#hc detect_monitors
+
+hc load web "(clients vertical:0 0x2c00007)"
+hc load dev "(split horizontal:0.5:0 (clients vertical:0 0x800002) (split vertical:0.5:0 (clients vertical:0 0x2200002) (clients vertical:0 0x2c00002)))"
+
+spawn_in_tag web vivaldi-stable
+
+spawn_in_tag dev alacritty
+spawn_in_tag dev alacritty
+spawn_in_tag dev alacritty
 
 # find the panel
 panel=~/.config/herbstluftwm/panel.sh
