@@ -8,6 +8,6 @@ Config { font = "xft:GohuFont"
        , commands = [ Run Cpu ["-L","3","-H","50","--normal","green","--high","red"] 10
                     , Run Memory ["-t","Mem: <usedratio>%"] 10
                     , Run Date "%a %b %_d %Y %H:%M" "date" 10
-                    ]
-       , template = "}{%cpu% | %memory% | <fc=#FF864E>%date%</fc>"
+               	    ]
+       , template = "}{%cpu% | %memory% | <fc=#FF8A8E>%date%</fc>"
        }
