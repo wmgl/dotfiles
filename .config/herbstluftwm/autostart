@@ -167,14 +167,16 @@ hc unlock
 
 hc set_monitors 1920x1080+0+0 1920x1062+1920+18 1920x1080+3840+0
 
-hc load web "(clients vertical:0 0x2c00007)"
-hc load dev "(split horizontal:0.5:0 (clients vertical:0 0x800002) (split vertical:0.5:0 (clients vertical:0 0x2200002) (clients vertical:0 0x2c00002)))"
+if hc silent new_attr bool my_is_first_time; then
+	hc load web "(clients vertical:0 0x2c00007)"
+	hc load dev "(split horizontal:0.5:0 (clients vertical:0 0x800002) (split vertical:0.5:0 (clients vertical:0 0x2200002) (clients vertical:0 0x2c00002)))"
 
-spawn_in_tag web vivaldi-stable
+	spawn_in_tag web vivaldi-stable
 
-spawn_in_tag dev alacritty
-spawn_in_tag dev alacritty
-spawn_in_tag dev alacritty
+	spawn_in_tag dev alacritty
+	spawn_in_tag dev alacritty
+	spawn_in_tag dev alacritty
+fi
 
 # find the panel
 panel=~/.config/herbstluftwm/panel.sh
